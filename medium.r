@@ -92,11 +92,7 @@ Randomized_cutting_plane <- function(P, c, iter = 10000, eps = 1e-8, tol = 1e-8,
     best <- min_value[1,1]
 
     # check stopping condition
-    
-    if( all(is.na(candidates) || is.infinite(candidates)) ){
-      print("caca")
-    }
-    
+
     if(all(is.na(candidates) || is.infinite(candidates)) || 
            (!is.null(prev_best) && (prev_best - best) < tol) ) {
       stop <- TRUE
